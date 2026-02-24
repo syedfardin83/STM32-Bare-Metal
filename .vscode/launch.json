@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32L0 (ST-Link)",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/main.elf", 
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "openocd",
+            "device": "STM32L072CZ",
+            "interface": "swd",
+            "configFiles": [
+                "interface/stlink.cfg",      
+                "target/stm32l0.cfg"         
+            ],
+            "preLaunchTask": "Build"         
+        }
+    ]
+}
