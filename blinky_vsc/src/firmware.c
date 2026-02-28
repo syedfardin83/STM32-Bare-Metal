@@ -2,8 +2,7 @@
 
 static void rcc_setup(void){
 
-    // rcc_clock_setup_pll();
-    // rcc_clock_set
+    rcc_clock_setup_pll(&rcc_hsi_configs[RCC_CLOCK_CONFIG_HSI_32MHZ]);
 }
 
 int main(){
