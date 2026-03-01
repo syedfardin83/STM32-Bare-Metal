@@ -35,6 +35,18 @@
                 "kind": "build",
                 "isDefault": false
             }
+        },
+        {
+            "label": "Build and Flash miniblink",
+            "type": "shell",
+            "command": "make && openocd -f interface/stlink.cfg -f target/stm32l0.cfg -c 'program miniblink.elf verify reset exit'",
+            "options": {
+                "cwd": "${workspaceFolder}/blinky_vsc/src"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }

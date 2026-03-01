@@ -26,7 +26,7 @@ int main(){
 
     while(1){
         gpio_toggle(LED_PORT,LED_PIN);
-        delay_cycles(32000000/4);
+        delay_cycles(32000000/16);
     }
     return 0;
 }
