@@ -4,9 +4,37 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "Build miniblink",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/blinky_vsc/src"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Flash miniblink (OpenOCD)",
+            "type": "shell",
+            "dependsOn": "Build miniblink",
+            "command": "openocd",
+            "args": [
+                "-f",
+                "interface/stlink.cfg",
+                "-f",
+                "target/stm32l0.cfg",
+                "-c",
+                "program miniblink.elf verify reset exit"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/blinky_vsc/src"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }

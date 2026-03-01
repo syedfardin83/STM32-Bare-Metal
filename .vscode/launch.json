@@ -3,19 +3,20 @@
     "configurations": [
         {
             "name": "Debug STM32L0 (ST-Link)",
-            "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/main.elf", 
+            "cwd": "${workspaceFolder}/blinky_vsc/src",
+            "executable": "${workspaceFolder}/blinky_vsc/src/miniblink.elf",
             "request": "launch",
             "type": "cortex-debug",
             "runToEntryPoint": "main",
             "servertype": "openocd",
             "device": "STM32L072CZ",
             "interface": "swd",
+            "gdbPath": "/usr/bin/gdb",
             "configFiles": [
-                "interface/stlink.cfg",      
-                "target/stm32l0.cfg"         
+                "interface/stlink.cfg",
+                "target/stm32l0.cfg"
             ],
-            "preLaunchTask": "Build"         
+            "preLaunchTask": "Build miniblink"
         }
     ]
 }

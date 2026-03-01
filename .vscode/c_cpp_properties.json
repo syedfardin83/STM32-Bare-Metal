@@ -3,9 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**",
-                "/usr/lib/gcc/arm-none-eabi/15.2.0/include",
-                "/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed"
+                "${workspaceFolder}/**"
             ],
             "defines": ["_DEBUG",
                 "UNICODE",

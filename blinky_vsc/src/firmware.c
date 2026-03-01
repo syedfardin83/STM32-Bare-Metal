@@ -1,6 +1,6 @@
 #include <stdint.h>
-#include <libopencm3/include/libopencm3/stm32/rcc.h>
-#include <libopencm3/include/libopencm3/stm32/gpio.h>
+#include <libopencm3/stm32/rcc.h>
+#include <libopencm3/stm32/gpio.h>
 
 #define LED_PORT (GPIOB)
 #define LED_PIN (GPIO5)
@@ -10,7 +10,7 @@ static void rcc_setup(void){
 }
 
 static void gpio_setup(void){
-    rcc_periph_clock_enable(GPIOB);
+    rcc_periph_clock_enable(RCC_GPIOB);
     gpio_mode_setup(LED_PORT,GPIO_MODE_OUTPUT,GPIO_PUPD_NONE,LED_PIN);
 }
 

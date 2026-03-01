@@ -19,8 +19,6 @@
 
 BINARY = miniblink
 
-LDSCRIPT = ./stm32l072.ld
-
-DEFS += -DSTM32L0
+OBJS += firmware.o
 
 include ./Makefile.include
