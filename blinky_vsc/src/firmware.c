@@ -39,6 +39,7 @@ static void systick_setup(void){
 int main(){
     rcc_setup();
     gpio_setup();
+    systick_setup();
 
     uint64_t start_time = get_ticks();
 
