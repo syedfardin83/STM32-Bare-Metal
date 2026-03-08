@@ -18,6 +18,11 @@
 ## along with this library.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
+## My includes:
+INCLUDES += -I../inc
+INCLUDES += -I../inc/core
+CFLAGS += $(INCLUDES)
+
 DEVICE = stm32l072czyx
 OPENCM3_DIR = ../libopencm3
 
