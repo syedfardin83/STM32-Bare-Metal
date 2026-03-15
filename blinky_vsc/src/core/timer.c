@@ -1,7 +1,10 @@
-#include "inc/core/timer.h"
+#include "../../inc/core/timer.h"
 #include "libopencm3/stm32/timer.h"
 #include <libopencm3/stm32/rcc.h>
 
+
+#define PRESCALER (32)
+#define ARR_VALUE (1000)
 
 // GPIO PB3 --> TIM2_CH2
 void timer_setup(void){
@@ -16,8 +19,14 @@ void timer_setup(void){
     //  Enable counter
     timer_enable_counter(TIM2);
     timer_enable_oc_output(TIM2,TIM_OC2);
+
+    //  Setup frequency and resolution
+    //  Both of these parameters determine the frequency/time period of one cycle
+    timer_set_prescaler(TIM2,PRESCALER-1);
+    timer_set_period(TIM2,ARR_VALUE-1);
 }
 
 void timer_pwm_set_duty_cycle(float duty_cycle){
-
+    const float raw_value = (float)ARR_VALUE * (duty_cycle/100.0f);
+    timer_set_oc_value(TIM2,TIM_OC2,(uint32_t)raw_value);
 }
