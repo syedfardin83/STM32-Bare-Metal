@@ -1,0 +1,3 @@
+
+To flash from src:
+openocd -f interface/stlink.cfg -f target/stm32l0.cfg -c "program miniblink.bin 0x08000000 verify reset exit"

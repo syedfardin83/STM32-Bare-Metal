@@ -1,3 +1,6 @@
 [submodule "blinky_vsc/libopencm3"]
 	path = blinky_vsc/libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "bootloader/libopencm3"]
+	path = bootloader/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
