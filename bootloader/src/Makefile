@@ -17,7 +17,7 @@
 ## along with this library.  If not, see <http://www.gnu.org/licenses/>.
 ##
 
-BINARY = miniblink
+BINARY = firmware
 
 OBJS += firmware.o
 OBJS += core/system.o
