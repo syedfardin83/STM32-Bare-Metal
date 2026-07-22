@@ -8,6 +8,7 @@ MEMORY
 SECTIONS
 {
  .text : {
+	*(.bootloader_section)
   *(.vectors)
   *(.text*)
   . = ALIGN(4);

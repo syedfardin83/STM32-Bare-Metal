@@ -22,5 +22,6 @@ BINARY = miniblink
 OBJS += firmware.o
 OBJS += core/system.o
 OBJS += core/timer.o
+OBJS += ./bootloader.o
 
 include ./Makefile.include

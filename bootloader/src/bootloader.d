@@ -1,4 +1,4 @@
-firmware.o: firmware.c ../inc/common-defines.h \
+bootloader.o: bootloader.c ../inc/common-defines.h \
  /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
  /usr/arm-none-eabi/include/machine/_default_types.h \

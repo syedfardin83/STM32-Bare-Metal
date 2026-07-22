@@ -1,10 +1,17 @@
 #include <libopencm3/stm32/gpio.h>
 #include <libopencm3/stm32/rcc.h>
+#include <libopencm3/cm3/scb.h>
 #include "system.h"
 #include "timer.h"
 
 #define LED_PORT      (GPIOB)
 #define LED_PIN       (GPIO3)
+
+#define BOOTLOADER_SIZE (0x1388)
+
+static void vector_setup(void) {
+  SCB_VTOR = BOOTLOADER_SIZE;
+}
 
 // GPIO PB3 --> TIM2_CH2
 static void gpio_setup(void){
@@ -15,6 +22,7 @@ static void gpio_setup(void){
 
 
 int main(){
+    vector_setup();
     system_setup();
     gpio_setup();
     timer_setup();

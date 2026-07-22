@@ -1,7 +1,7 @@
 #include "common-defines.h"
 #include "libopencm3/stm32/memorymap.h"
 
-#define BOOTLOADER_SIZE            (0x8000)
+#define BOOTLOADER_SIZE            (0x1388)
 #define MAIN_APP_START_ADDRESS     (FLASH_BASE + BOOTLOADER_SIZE)
 
 
