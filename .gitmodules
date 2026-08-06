@@ -4,3 +4,6 @@
 [submodule "bootloader/libopencm3"]
 	path = bootloader/libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "board_test/libopencm3"]
+	path = board_test/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git

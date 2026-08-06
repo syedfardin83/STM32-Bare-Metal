@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build miniblink",
+            "label": "Build blinky_vsc",
             "type": "shell",
             "command": "make",
             "options": {
@@ -16,7 +16,7 @@
             }
         },
         {
-            "label": "Flash miniblink (OpenOCD)",
+            "label": "Flash blinky_vsc (OpenOCD)",
             "type": "shell",
             "dependsOn": "Build miniblink",
             "command": "openocd",
@@ -37,7 +37,7 @@
             }
         },
         {
-            "label": "Build and Flash miniblink",
+            "label": "Build and Flash blinky_vsc",
             "type": "shell",
             "command": "make && openocd -f interface/stlink.cfg -f target/stm32l0.cfg -c 'program miniblink.elf verify reset exit'",
             "options": {

@@ -6,10 +6,8 @@
                 "/usr/lib/gcc/arm-none-eabi/15.2.0/include",
                 "/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed",
                 "/usr/arm-none-eabi/include",
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/bootloader/inc",
-                "${workspaceFolder}/bootloader/inc/core",
-                "${workspaceFolder}/bootloader/libopencm3/include"
+                "${workspaceFolder}/**"
+
             ],
             "defines": ["_DEBUG",
                 "UNICODE",

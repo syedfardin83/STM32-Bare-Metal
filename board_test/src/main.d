@@ -1,4 +1,4 @@
-firmware.o: firmware.c ../libopencm3/include/libopencm3/stm32/gpio.h \
+main.o: main.c ../libopencm3/include/libopencm3/stm32/gpio.h \
  ../libopencm3/include/libopencm3/cm3/common.h \
  /usr/lib/gcc/arm-none-eabi/15.2.0/include/stdint.h \
  /usr/arm-none-eabi/include/stdint.h \
@@ -22,5 +22,4 @@ firmware.o: firmware.c ../libopencm3/include/libopencm3/stm32/gpio.h \
  ../libopencm3/include/libopencm3/stm32/common/pwr_common_v2.h \
  ../libopencm3/include/libopencm3/stm32/common/pwr_common_v1.h \
  ../libopencm3/include/libopencm3/stm32/common/rcc_common_all.h \
- ../libopencm3/include/libopencm3/cm3/scb.h ../inc/core/system.h \
- ../inc/core/timer.h
+ ../inc/core/system.h ../inc/core/timer.h
