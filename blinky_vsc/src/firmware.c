@@ -17,8 +17,8 @@ static void vector_setup(void) {
 // GPIO PB3 --> TIM2_CH2
 static void gpio_setup(void){
     rcc_periph_clock_enable(RCC_GPIOB);
-    gpio_mode_setup(LED_PORT,GPIO_MODE_OUTPUT,GPIO_PUPD_NONE,LED_PIN);
-    // gpio_set_af(LED_PORT,GPIO_AF2,LED_PIN);
+    gpio_mode_setup(LED_PORT,GPIO_MODE_AF,GPIO_PUPD_NONE,LED_PIN);
+    gpio_set_af(LED_PORT,GPIO_AF4,LED_PIN);
 }
 
 
