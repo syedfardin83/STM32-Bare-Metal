@@ -4,11 +4,11 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build blinky_vsc",
+            "label": "Build usart_usb",
             "type": "shell",
             "command": "make",
             "options": {
-                "cwd": "${workspaceFolder}/blinky_vsc/src"
+                "cwd": "${workspaceFolder}/usart_usb/src"
             },
             "group": {
                 "kind": "build",
@@ -16,9 +16,9 @@
             }
         },
         {
-            "label": "Flash blinky_vsc (OpenOCD)",
+            "label": "Flash usart_usb (OpenOCD)",
             "type": "shell",
-            "dependsOn": "Build miniblink",
+            "dependsOn": "Build firmware",
             "command": "openocd",
             "args": [
                 "-f",
@@ -26,10 +26,10 @@
                 "-f",
                 "target/stm32l0.cfg",
                 "-c",
-                "program miniblink.elf verify reset exit"
+                "program firmware.elf verify reset exit"
             ],
             "options": {
-                "cwd": "${workspaceFolder}/blinky_vsc/src"
+                "cwd": "${workspaceFolder}/usart_usb/src"
             },
             "group": {
                 "kind": "build",
@@ -37,11 +37,11 @@
             }
         },
         {
-            "label": "Build and Flash blinky_vsc",
+            "label": "Build and Flash usart_usb",
             "type": "shell",
-            "command": "make && openocd -f interface/stlink.cfg -f target/stm32l0.cfg -c 'program miniblink.elf verify reset exit'",
+            "command": "make && openocd -f interface/stlink.cfg -f target/stm32l0.cfg -c 'program firmware.elf verify reset exit'",
             "options": {
-                "cwd": "${workspaceFolder}/blinky_vsc/src"
+                "cwd": "${workspaceFolder}/usart_usb/src"
             },
             "group": {
                 "kind": "build",

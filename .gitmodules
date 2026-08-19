@@ -7,3 +7,6 @@
 [submodule "board_test/libopencm3"]
 	path = board_test/libopencm3
 	url = https://github.com/libopencm3/libopencm3.git
+[submodule "usart_usb/libopencm3"]
+	path = usart_usb/libopencm3
+	url = https://github.com/libopencm3/libopencm3
